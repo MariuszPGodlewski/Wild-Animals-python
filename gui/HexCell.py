@@ -34,5 +34,5 @@ class Cell:
         #self.canvas.tag_bind(self.label, "<Button-1>", self.on_click)
 
     def on_click(self, event):
-        self.game.add_organims_to_cell(self.canvas, event.x_root, event.y_root, self.id)
+        self.game.add_organism_to_cell(self.canvas, event.x_root, event.y_root, self.id)
 

@@ -24,12 +24,13 @@ class HexagonalGrid:
                 self.cells.append(cell)
                 hex_id += 1
         for organism in self.game.get_organisms():
-            x = organism.Get_X()
-            y = organism.Get_Y() * c.GRID_SIZE
-            self.cells[y + x].add_label(organism.GetSymbol())
+            x = organism.get_x()
+            y = organism.get_y() * c.GRID_SIZE
+            self.cells[y + x].add_label(organism.get_symbol())
 
 
     def get_clicked(self, x, y):
         clicked_items = self.canvas.find_withtag(tk.CURRENT)
         if clicked_items:
             return self.canvas.gettags(clicked_items[0])[0]
+

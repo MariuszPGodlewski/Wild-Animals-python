@@ -27,15 +27,15 @@ class SquareGrid:
                 #self.canvas.tag_bind(label, "<Button-1>", lambda event, rect=rect: self.on_click(rect))
                 square_id += 1
         for organism in self.game.get_organisms():
-            x = organism.Get_X() * self.square_size + constants.MARGIN_X
-            y = organism.Get_Y() * self.square_size + constants.MARGIN_Y
-            label = self.canvas.create_text(x + self.square_size / 2, y + self.square_size / 2, text=str(organism.GetSymbol()),tags=str(square_id))
+            x = organism.get_x() * self.square_size + constants.MARGIN_X
+            y = organism.get_y() * self.square_size + constants.MARGIN_Y
+            label = self.canvas.create_text(x + self.square_size / 2, y + self.square_size / 2, text=str(organism.get_symbol()),tags=str(square_id))
 
     def on_click(self, event, rect):
         self.canvas.itemconfig(rect, fill='yellow')
         #print(f"Clicked square with ID: {self.canvas.gettags(rect)[0]}")
         # event.X_root and  y are the loacation where the window should be displayed
-        self.game.add_organims_to_cell(self.canvas, event.x_root, event.y_root, rect)
+        self.game.add_organism_to_cell(self.canvas, event.x_root, event.y_root, rect)
 
     def get_clicked(self, x, y):
         clicked_items = self.canvas.find_withtag(tk.CURRENT)

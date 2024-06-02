@@ -7,12 +7,17 @@ MARGIN_Y = 50
 
 #World
 MAX_NR_OF_ORGANISMS = 400
-UP = -1;
-DOWN = 1;
-LEFT = -1;
-RIGHT = 1;
+UP = -1
+DOWN = 1
+LEFT = -1
+RIGHT = 1
+
+SAWING_CHANCE = 10
+cybersheep_symbol = "C"
+sosnowsky_symbol = "s"
 
 # Grid sizes
 HEX_SIZE = 15
 SQUARE_SIZE = 30
 GRID_SIZE = 15
+BOARD_SIZE = GRID_SIZE
